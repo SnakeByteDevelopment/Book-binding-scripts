@@ -2,8 +2,8 @@
 some handy scripts I use on my own computer and like to share.
 
 ## scan2file.sh
-This script originally did nothing more than scanning multiple pages to an pdf file. 
-I added som functionallities to the script to interpret the text of the scanned documents and
+This script originally did nothing more than scanning multiple pages to a pdf file. 
+I added some functionallities to the script to interpret the text of the scanned documents and
 send the files to an printer specified in the script.
 
 ### tiff2pdf bugs

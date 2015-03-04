@@ -57,7 +57,7 @@ function scan ()
     mkdir $tmpdir
     cd $tmpdir
     echo "################## Scanning ###################"
-    scanimage -y 279.4 -x 215.9 --batch --format=tiff --resolution 300 
+    scanimage -y 279.4 -x 215.9 --batch=out%03d.tif --format=tiff --resolution 300 
 }   # ----------  end of function scan  ----------
 
 #===  FUNCTION  ================================================================

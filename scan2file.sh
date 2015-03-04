@@ -135,13 +135,13 @@ scan
 
 if [[ ocr -eq 1 ]]; then
     ocr
-filename_lower_camel
+fi
 
 merge2pdf
 
-if [[ printit -eq 1]]; then
+if [[ printit -eq 1 ]]; then
     print
 fi
 
 cd ..
-rm -r ./$tmpdir
+rm -rf ./$tmpdir

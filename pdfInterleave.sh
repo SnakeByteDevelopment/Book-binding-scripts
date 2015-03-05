@@ -1,30 +1,30 @@
 #!/usr/bin/env bash
 
-
-#===============================================================================#
-# pdfInterleave: interleave 2sided scanned documents to 1 file                  #
-# Copyright (C) 2015 Gert Pellin gert@gepe-biljarts.be                          #
-#                                                                               #
-# This program is free software; you can redistribute it and/or modify          #
-# it under the terms of the GNU General Public License as published by          #
-# the Free Software Foundation; either version 2 of the License, or             #
-# (at your option) any later version.                                           #
-#                                                                               #
-# This program is distributed in the hope that it will be useful,               #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of                #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                  #
-# GNU General Public License for more details.                                  #
-#                                                                               #
-# You should have received a copy of the GNU General Public License             #
-# along with this program; if not, see <http://www.gnu.org/licenses/>.          #
-#===============================================================================#
+#===  LICENSE  ================================================================
+# pdfinterleave: interleave 2sided scanned documents from 2 files.
+# Copyright (C) 2015 <`2:Gert Pellin <gert@gepe-biljarts.be>`>
+#
+# This script is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>.
+#==============================================================================
+__ScriptVersion="1.0"
 
 outname="interleaved"
 
-
-__ScriptVersion="1.0"
-
-
+#===  FUNCTION  ===============================================================
+#         NAME: add_leading_zero
+#  DESCRIPTION: <`0:`>
+#==============================================================================
 function add_leading_zero {
 	prefix=$1
 	baseprefix=$(basename $prefix | sed -e 's/[]\/()$*.^|[]/\\&/g')
@@ -38,6 +38,10 @@ function add_leading_zero {
 	done
 }
 
+#===  FUNCTION  ===============================================================
+#         NAME: pdfinterleave
+#  DESCRIPTION: <`0:Interleave the pages`>
+#==============================================================================
 function pdfinterleave {
 	oddfile=$1
 	oddbase=$2
@@ -129,7 +133,7 @@ evenbase=${2%.*}
 odddir=$(dirname $oddbase)
 oddfile=$(basename $oddbase)
 evenfile=$(basename $evenbase)
-outfile="$odddir/$outfile.pdf"
+outfile="$odddir/$outname.pdf"
 key=$(tr -dc "[:alpha:]" < /dev/urandom | head -c 8)
 if [ -e $outfile ]
 then

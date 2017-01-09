@@ -78,8 +78,6 @@ tmpdir=pdf2bind-$RANDOM
 mkdir ~/$tmpdir
 cd ~/$tmpdir
 pdftops $workingdir/$1 ps.ps
-#pdfseparate $workingdir/$1 "page-%d.pdf"
-#add_leading_zero "page-"
 declare -i bundlenr=1
 for (( i=1; i < `pdfinfo $workingdir/$1 | grep Pages | sed 's/[^0-9]*//'`; i=$i+32 )); do
     psselect -q -p`declare -i j=$i
@@ -105,8 +103,6 @@ for file in ./out*.ps
 do
     psbook $file | psnup  -b1.4cm -s0.6 -p$papertype -2 > book_$bundlenr.ps
     ps2pdf book_$bundlenr.ps book_$bundlenr.pdf
-    #rm $file
-    #rm book_$file
     bundlenr=$bundlenr+1
 done
 

@@ -2,7 +2,7 @@
 
 #===  LICENSE  ================================================================
 # pdf2bind: make a pdf file ready to print for bookbinding.
-# Copyright (C) 2015 <`2:Gert Pellin <gert@gepe-biljarts.be>`>			
+# Copyright (C) 2017 <`2:Gert Pellin <gert@pellin.be>`>			
 #									
 # This script is free software; you can redistribute it and/or modify	
 # it under the terms of the GNU General Public License as published by	

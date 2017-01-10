@@ -3,7 +3,7 @@
 
 #===============================================================================#
 # scanToFile: multiple file scanning script to pdf and OCR                      #
-# Copyright (C) 2015 Gert Pellin gert@gepe-biljarts.be                          #
+# Copyright (C) 2017 Gert Pellin gert@pellin.be                                 #
 #                                                                               #
 # This program is free software; you can redistribute it and/or modify          #
 # it under the terms of the GNU General Public License as published by          #
